@@ -1,0 +1,40 @@
+{%extends 'base.html' %}
+{%block head%} 
+    Home
+{%endblock%}
+
+{%block body%}
+<h3 id="heading">
+    Summer tasks
+</h3>
+<table id="table">
+    <tr>
+        <th>S.No</th>
+        <th>Task</th>
+        <th>Added</th>
+        <th>Action</th>
+    </tr>
+    {% for task in tasks %}
+    <tr>
+        <td>{{ task.id }}</td>
+        <td>{{ task.title }}</td>
+        <td>{{ task.date_created.strftime('%Y-%m-%d') }}</td>
+        <td>
+            <a href="/delete/{{task.id}}">
+                <button>delete</button>
+            </a>
+            <a href="/update/{{task.id}}">
+                <button>update</button>
+            </a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<form action="/" method="POST">
+    <input type="text" name="task" placeholder="Enter a task" autocomplete="off" required>
+    <button type="submit">Add</button>
+</form>
+
+{%endblock%}
+
+

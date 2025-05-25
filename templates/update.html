@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block head %} 
+    Update Task
+{% endblock %}
+ 
+{% block body %}
+<form action="/update/{{task.id}}" method="POST">
+    <input type="text" name="task" value="{{task.title}}" autocomplete="off" required>
+    <button type="submit">Update</button>
+</form>
+{%endblock%}

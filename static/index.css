@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#heading{
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+#table{
+    align-self: center;
+    background-color: antiquewhite;;
+    position: relative;
+    left: 33%;
+    width: 500px;
+    border-spacing: 0px 10px;
+}
+#table td{
+    text-align: center;
+}
+form{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+input{
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 1em;
+    padding-left: 10px;
+}
+button{
+    width: 70px;
+    height: 22px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 1em;
+    background-color: rgb(10, 169, 255);
+    color: white;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(60, 0, 255);
+    color: white;
+}
